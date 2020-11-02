@@ -2,6 +2,7 @@ Useful functions to log efficiently into a log.txt file and send you logs by Tel
 
 How to use : 
 
+```
 import tglog
 
 my_chat_id = "12345"            # Your telegram chat_id, usually a chain of integers
@@ -13,3 +14,4 @@ tl = tglog.logger(my_chat_id,
 tl.debug("info for debugging")   # Receive message when checkpoint reached
 tl.info("info to be logged")     # Receive some info
 tl.error(traceback.format_exc()) # Receive traceback of errors
+```
