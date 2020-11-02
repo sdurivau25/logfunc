@@ -29,12 +29,13 @@ tl = tglog.logger(my_chat_id, my_bot_token)
 
 ## Use any of those functions in your code :
 ### Useful for debugging ; Telegram bot won't send notification :
-`tl.debug("info for debugging")`    Receive message when checkpoint reached
+Receive message when checkpoint reached :
+`tl.debug("info for debugging")`    
 ### Useful for logging some infos
-`tl.info("info to be logged")`      Receive some infos
+ Receive some infos :
+`tl.info("info to be logged")`     
 ### Useful for logging errors
-`tl.error(traceback.format_exc())`  Receive traceback of errors
+Receive traceback of errors :
+`tl.error(traceback.format_exc())`  
 
-### The only between the 3 functions is the header : 
-`- DEBUG -` for `tl.debug`, `- INFO -` for tl.info, `- ERROR -` for tl.error.
 
