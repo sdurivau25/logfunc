@@ -16,7 +16,6 @@ How to use :
 
 ## Initialization :
 ```
-import traceback
 import tglog
 
 my_chat_id = "12345"            # Your telegram chat_id
