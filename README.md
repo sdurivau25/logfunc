@@ -1,6 +1,9 @@
-Useful functions to log efficiently into a log.txt file and send you logs by Telegram.
+###Useful functions to log efficiently into a log.txt file and send you logs by Telegram.
+
 You need your telegram chat_id, usually a chain of integers and the token of the telegram bot you want to receive logs from.
+
 If you don't know your telegram chat_id, just send `/my_id` to telegram bot `@get_id_bot`.
+
 If you haven't created any telegram bot, just send `/newbot` to `@BotFather`.
 
 How to use : 
