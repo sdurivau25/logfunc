@@ -1,4 +1,10 @@
-###Useful functions to log efficiently into a log.txt file and send you logs by Telegram.
+## Useful functions to log efficiently into a log.txt file and send you logs by Telegram.
+
+Using this logger will :
+- Create a `log.txt` file and append it new errors, with date and time of happening ;
+- Send you every info or error via Telegram.
+
+To install, type `python3 -m pip install tglog`, or try with `py ` instead of `python3` if you get any error.
 
 You need your telegram chat_id, usually a chain of integers and the token of the telegram bot you want to receive logs from.
 
@@ -8,16 +14,27 @@ If you haven't created any telegram bot, just send `/newbot` to `@BotFather`.
 
 How to use : 
 
+## Initialization :
 ```
+import traceback
 import tglog
 
 my_chat_id = "12345"            # Your telegram chat_id
 my_bot_token = "token123"       # The token of the telegram bot you want to receive logs from
 
-tl = tglog.logger(my_chat_id, 
-          my_bot_token)
+# Initialize your logger :
 
-tl.debug("info for debugging")   # Receive message when checkpoint reached
-tl.info("info to be logged")     # Receive some info
-tl.error(traceback.format_exc()) # Receive traceback of errors
+tl = tglog.logger(my_chat_id, my_bot_token)
 ```
+
+## Use any of those functions in your code :
+### Useful for debugging ; Telegram bot won't send notification :
+`tl.debug("info for debugging")`    Receive message when checkpoint reached
+### Useful for logging some infos
+`tl.info("info to be logged")`      Receive some infos
+### Useful for logging errors
+`tl.error(traceback.format_exc())`  Receive traceback of errors
+
+### The only between the 3 functions is the header : 
+`- DEBUG -` for `tl.debug`, `- INFO -` for tl.info, `- ERROR -` for tl.error.
+
