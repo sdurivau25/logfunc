@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="tglog",
-    version="2.0",
+    version="4.0",
     author="Stanislas du Rivau",
     author_email="sdurivau25@gmail.com",
     description="Log errors in a log.txt file and receive them by telegram.",
